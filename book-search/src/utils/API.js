@@ -10,6 +10,12 @@ const API = {
         .catch(function(error) {
             console.log(error);
         }).then(console.log("Ran Search.."));
+    },
+    getBooks: function() {
+        return axios.get("/api/books");
+    },
+    saveBook: function() {
+        return axios.post("/api/books");
     }
 };
 
