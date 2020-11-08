@@ -7,6 +7,7 @@ const BookCard = (props) => {
             <div className="desc p-3">
                 <h2>{props.title}</h2>
                 <h3>{props.author}</h3>
+                <a className="btn btn-primary" href={props.link}>Go to E-Reader</a>
             </div>
         </div>
     )

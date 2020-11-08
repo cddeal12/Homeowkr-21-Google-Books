@@ -11,6 +11,7 @@ function BooksReturn(props) {
                         title={book.volumeInfo.title}
                         image={book.volumeInfo.imageLinks.thumbnail}
                         author={book.volumeInfo.authors}
+                        link={book.volumeInfo.previewLink}
                     />
                 })
             }
