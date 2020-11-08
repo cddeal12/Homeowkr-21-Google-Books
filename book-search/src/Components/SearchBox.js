@@ -6,7 +6,7 @@ function SearchBox(props) {
             <div className="input-group mb-3">
                 <input type="text" onChange={props.handleSearch} className="form-control"/>
                 <div className="input-group-append">
-                    <button className="btn text-white btn-success btn-outline-secondary" type="button" onClick={props.searchBooks}>Search</button>
+                    <button className="btn text-white btn-success btn-outline-secondary" type="submit" onClick={props.searchBooks}>Search</button>
                 </div>
             </div>
         </div>
