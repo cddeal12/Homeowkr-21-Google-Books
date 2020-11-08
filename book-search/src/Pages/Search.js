@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import BooksReturn from "../Components/BooksReturn";
 import SearchBox from '../Components/SearchBox';
 import API from '../utils/API';
 
@@ -16,7 +17,10 @@ class Search extends Component {
     };
 
     searchBooks = () => {
-        API.searchBooks();
+        API.searchBooks(this.state.searchValue)
+        .then((res) => {
+            this.setState({books: res.data.items});
+        });
     };
 
     render() {
@@ -28,6 +32,7 @@ class Search extends Component {
                         <h3>Search for and save books</h3>
                     </div>
                     <SearchBox handleSearch={this.handleSearch} searchBooks={this.searchBooks}/>
+                    <BooksReturn books={this.state.books} />
                 </div>
             </div>
         );
