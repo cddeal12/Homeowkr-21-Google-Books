@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import SearchBox from '../Components/SearchBox';
+import API from '../utils/API';
 
 class Search extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class Search extends Component {
     };
 
     searchBooks = () => {
-
+        API.searchBooks();
     };
 
     render() {
@@ -26,7 +27,7 @@ class Search extends Component {
                         <h1>Google Books Search</h1>
                         <h3>Search for and save books</h3>
                     </div>
-                    <SearchBox handleSearch={this.handleSearch}/>
+                    <SearchBox handleSearch={this.handleSearch} searchBooks={this.searchBooks}/>
                 </div>
             </div>
         );
