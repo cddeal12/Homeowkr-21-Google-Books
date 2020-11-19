@@ -9,9 +9,9 @@ function BooksReturn(props) {
                     return <BookCard 
                         key ={i}
                         title={book.volumeInfo.title}
-                        image={book.volumeInfo.imageLinks.thumbnail}
                         author={book.volumeInfo.authors}
                         link={book.volumeInfo.previewLink}
+                        image={book.volumeInfo.imageLinks.thumbnail ? book.volumeInfo.imageLinks.thumbnail : ""} 
                     />
                 })
             }
